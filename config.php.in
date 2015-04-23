@@ -1,0 +1,64 @@
+<?php
+
+	/* sBoardTitle : titre de votre tribune. Ce titre sera utilisé
+	dans HEAD.TITLE ainsi que dans la zone de titre du corps de chaque page. */
+
+	$sBoardTitle = 'Votre titre ici' ;
+
+	/* sBoardName : nom de votre tribune pour les c². Ce nom est le nom que vous
+	recommandez aux utilisateurs de c² et doit donc être unique parmi l'ensemble
+	des tribunes. */
+
+	$sBoardName = 'faab' ;
+
+	/* bAllowAnonymous : si vous ne souhaitez pas que les utilisateurs non
+	authentifiés puissent poster sur votre tribune, mettez bAllowAnonymous à
+	FALSE. Par défaut, les anonymes sont autorisés. */
+
+	$bAllowAnonymous = TRUE ;
+
+	/* iBoardSize : nombre de message à conserver. Ce nombre correspond au
+	nombre de messages affichés sur la version Web de la tribune ET dans le
+	backend XML. Notez que FAAB ne maintient pas d'historique, de sorte que
+	seuls les $iBoardSize derniers messages sont disponibles. */
+
+	$iBoardSize = 30 ;
+
+	/* iMsgLen : taille d'un message en caractères. Il s'agit de la taille
+	maximale d'un message en caractères UTF-8, et non pas en octets. Si le
+	message contient plus de caractères que cette limite, il sera tronqué à
+	$iMsgLen caractère. */
+
+	$iMsgLen = 512 ;
+
+	/* sUserDir : Ce dossier contient les comptes utilisateurs : son nom est
+	généré aléatoirement par le script ./init.sh livré avec les sources de
+	FAAB. Ne surtout pas mettre un nom facile à deviner comme "users" car
+	n'importe qui pourrait visualiser le contenu de chaque compte en saisissant
+	l'URL dans le navigateur. On pourrait utiliser un fichier .htaccess pour
+	interdire l'accès aux fichiers des comptes *.dat mais pas tous les
+	hébergements ne permettent cela. */
+
+	$sUsersDir    = 'data/@USERS_DIR@' ;
+
+	/* sPostsFile : fichier contenant les derniers messages de la tribune.
+	Ne surtout pas mettre un nom facile à deviner comme "backend.dat" car
+	n'importe qui pourrait en visualiser le contenu (dont les adresses IP des
+	posteurs) en saisissant l'URL dans le navigateur. On pourrait utiliser un
+	fichier .htaccess pour interdire l'accès à ce fichier *.dat mais pas tous
+	les hébergements ne permettent cela. */
+
+	$sPostsFile   = 'data/@POSTS_FILE@.dat' ;
+
+	/* Normalement, il n'est pas nécessaire de modifier ce qui suit, mais après
+	tout, c'est votre tribune ;) */
+
+	$sHtmlFile    = 'data/backend.html' ;
+	$sXmlFile     = 'data/backend.xml' ;
+
+	$sCookieName     = 'faab_id' ;
+	$iCookieLifetime = 60*60*24*15 ; /* 15 jours */
+	$sCookiePath     = '/' ;
+
+	error_reporting( E_NONE );
+?>

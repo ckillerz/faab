@@ -1,0 +1,129 @@
+a {
+	color: blue ;
+	text-decoration: none ;
+}
+a:hover {
+	background-color: yellow ;
+}
+
+body {
+	color: black ;
+	background-color: white ;
+	font-family:  verdana, helvetica, sans-serif ;
+	font-size: 1em ;
+	margin: 0 ;
+	padding: 0 ;
+}
+
+div.header {
+	background-color: white ;
+	border: 1px black solid ;
+	margin: auto ;
+	margin-top: 1em ;
+	margin-bottom: 1em ;
+	text-align: center ;
+	width: 50em ;
+	padding: 1em ;
+}
+
+h1 {
+	margin: 0 ;
+	padding: 0 ;
+}
+
+h2 {
+	text-align: center ;
+}
+
+h3 {
+	text-align: left ;
+}
+
+div.links {
+	font-size: smaller ;
+	text-align: center ;
+	margin: 0 ;
+	margin-bottom: 2pt ;
+}
+
+div.board, div.content {
+	border: 1px black solid ;
+	margin: auto ;
+	margin-top: 1em ;
+	margin-bottom: 1em ;
+	padding: 1em ;
+	width: 50em ;
+	overflow: hidden ;
+}
+
+span.time {
+	color: green ;
+	cursor: default ;
+}
+
+span.login {
+	color: red ;
+	cursor: default ;
+}
+
+span.user-agent {
+	color: #883A3A ;
+	cursor: default ;
+}
+
+span.message {
+	color: black ;
+}
+
+span.timeref {
+	color: blue ;
+	cursor: default ;
+}
+
+p.input {
+	text-align: center ;
+}
+
+p.content {
+	margin-left: 20pt ;
+	margin-right: 20pt ;
+}
+
+pre.content {
+	margin-left: 20pt ;
+}
+
+input.text {
+	border: 1px solid black ;
+	padding: 2px ;
+}
+
+input.button {
+	border: 1px solid black ;
+	padding: 2px ;
+	background-color: #DDDDDD ;
+}
+
+div.footer {
+	font-size: smaller ;
+	text-align: center ;
+}
+
+/* Couleurs */
+
+body {
+	background-color : #CDCAC5 ;
+}
+div.content, div.board {
+	background-color : white ;
+}
+h1, h2, h3 {
+	color : #A41039 ;
+}
+
+tt {
+	color: purple ;
+}
+pre {
+	color: green ;
+}	
