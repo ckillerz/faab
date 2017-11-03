@@ -156,6 +156,7 @@
 	$sHtml = '' ;
 	$sXml = '<?xml version="1.0" encoding="UTF-8"?>'
 	     . "<board site=\"" . $_SERVER['SERVER_NAME'] . "\">" ;
+        $sTsv = '';
 
 	foreach( $aPosts as $iId => $aPost )
 	{
@@ -201,6 +202,8 @@
 		. "<message>$sMessage</message>"
 		. "<login>$sLogin</login>"
 		. "</post>" ;
+                
+                $sTsv = "$iId\t$sTime\t$sUserAgent\t$sLogin\t$sMessage\n" . $sTsv;
 	} 
 	$sXml = $sXml . '</board>' ;
 
@@ -216,6 +219,13 @@
 		header( 'HTTP/1.1 500 Internal Server Error' );
 		header( 'Content-Type: text/plain; charset=UTF-8' );
 		exit( 'Erreur : Enregistrement du backend XML impossible.' );
+	}
+        
+        if( ! FileWriteRaw( $sTsvFile,   $sTsv ) )
+	{
+		header( 'HTTP/1.1 500 Internal Server Error' );
+		header( 'Content-Type: text/plain; charset=UTF-8' );
+		exit( 'Erreur : Enregistrement du backend TSV impossible.' );
 	}
 
 	if( ! FileWrite( $sPostsFile, serialize($aPosts) ) )

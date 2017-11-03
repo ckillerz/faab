@@ -55,6 +55,7 @@
 
 	$sHtmlFile    = 'data/backend.html' ;
 	$sXmlFile     = 'data/backend.xml' ;
+        $sTsvFile     = 'data/backend.tsv' ;
 
 	$sCookieName     = 'faab_id' ;
 	$iCookieLifetime = 60*60*24*15 ; /* 15 jours */
