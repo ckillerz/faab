@@ -7,6 +7,12 @@
 		. $_SERVER['SERVER_PORT']
 		. dirname($_SERVER['PHP_SELF'])
 		. '/' . $sXmlFile ;
+        $sBackendTsvURL = 'http://'
+		. $_SERVER['SERVER_NAME']
+		. ':'
+		. $_SERVER['SERVER_PORT']
+		. dirname($_SERVER['PHP_SELF'])
+		. '/' . $sTsvFile ;
 	$sPostURL = 'http://'
 		. $_SERVER['SERVER_NAME']
 		. ':'
@@ -44,6 +50,9 @@
 		générer trop de trafic pour cette tribune afin de respecter les
 		ressources mise à diposition par l'hébergeur. Merci&nbsp;!
 	</p>
+        <p class="content">
+            Un backend TSV est aussi disponible: <?php echo $sBackendTsvURL ?>
+        </p>
 </div>
 
 <?php
